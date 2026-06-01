@@ -19,123 +19,45 @@
     --red: #ef4444;
     --text: #e8eaf0;
     --muted: #6b7280;
-    --card-shadow: 0 4px 24px rgba(0,0,0,0.4);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    font-size: 14px;
-  }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; font-size: 14px; }
 
-  /* LOGIN SCREEN */
-  #login-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0f1117 0%, #1a1f35 50%, #0f1117 100%);
-  }
-  .login-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 48px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    box-shadow: var(--card-shadow);
-  }
-  .login-logo {
-    width: 64px; height: 64px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    border-radius: 16px;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 24px;
-    font-size: 28px; font-weight: 700; color: white;
-  }
+  /* LOGIN */
+  #login-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, #0f1117 0%, #1a1f35 50%, #0f1117 100%); }
+  .login-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 48px; max-width: 400px; width: 100%; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+  .login-logo { width: 64px; height: 64px; background: linear-gradient(135deg, var(--accent), var(--accent2)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px; font-weight: 700; color: white; }
   .login-card h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
   .login-card p { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
-  .btn-login {
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    width: 100%; padding: 14px 24px;
-    background: var(--accent); color: white;
-    border: none; border-radius: 10px;
-    font-size: 15px; font-weight: 600; cursor: pointer;
-    transition: all 0.2s; font-family: 'DM Sans', sans-serif;
-  }
-  .btn-login:hover { background: #3d6ef0; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(79,127,255,0.3); }
+  .btn-login { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 14px 24px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+  .btn-login:hover { background: #3d6ef0; transform: translateY(-1px); }
   .login-error { color: #fca5a5; font-size: 13px; margin-top: 16px; display: none; }
 
-  /* MAIN APP */
+  /* APP */
   #app { display: none; }
 
   /* HEADER */
-  .header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 24px;
-    background: var(--surface); border-bottom: 1px solid var(--border);
-    position: sticky; top: 0; z-index: 100;
-  }
+  .header { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
   .header-left { display: flex; align-items: center; gap: 12px; }
-  .logo-small {
-    width: 36px; height: 36px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 14px; color: white;
-  }
+  .logo-small { width: 36px; height: 36px; background: linear-gradient(135deg, var(--accent), var(--accent2)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: white; }
   .header h2 { font-size: 16px; font-weight: 600; }
   .header-right { display: flex; align-items: center; gap: 12px; }
-  .user-badge {
-    display: flex; align-items: center; gap: 8px;
-    background: var(--surface2); border: 1px solid var(--border);
-    border-radius: 8px; padding: 6px 12px; font-size: 13px;
-  }
-  .user-avatar {
-    width: 26px; height: 26px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 11px; font-weight: 600; color: white;
-  }
+  .user-badge { display: flex; align-items: center; gap: 8px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px; font-size: 13px; }
+  .user-avatar { width: 26px; height: 26px; background: linear-gradient(135deg, var(--accent), var(--accent2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: white; }
   .role-pill { font-size: 11px; padding: 2px 8px; border-radius: 20px; font-weight: 500; }
   .role-Beheerder { background: rgba(79,127,255,0.15); color: var(--accent); }
   .role-BM { background: rgba(124,58,237,0.15); color: #a78bfa; }
   .role-TM { background: rgba(34,197,94,0.15); color: var(--green); }
   .role-Recruiter { background: rgba(245,158,11,0.15); color: var(--amber); }
-  .btn-refresh {
-    display: flex; align-items: center; gap: 6px;
-    padding: 6px 14px; background: var(--surface2);
-    border: 1px solid var(--border); border-radius: 8px;
-    color: var(--text); font-size: 13px; cursor: pointer;
-    font-family: 'DM Sans', sans-serif; transition: all 0.2s;
-  }
+  .btn-refresh { display: flex; align-items: center; gap: 6px; padding: 6px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
   .btn-refresh:hover { border-color: var(--accent); color: var(--accent); }
-  .btn-logout {
-    padding: 6px 14px; background: transparent;
-    border: 1px solid var(--border); border-radius: 8px;
-    color: var(--muted); font-size: 13px; cursor: pointer;
-    font-family: 'DM Sans', sans-serif; transition: all 0.2s;
-  }
+  .btn-logout { padding: 6px 14px; background: transparent; border: 1px solid var(--border); border-radius: 8px; color: var(--muted); font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
   .btn-logout:hover { border-color: var(--red); color: var(--red); }
 
   /* FILTERS */
-  .filters {
-    display: flex; align-items: center; gap: 12px;
-    padding: 14px 24px;
-    background: var(--surface); border-bottom: 1px solid var(--border);
-  }
+  .filters { display: flex; align-items: center; gap: 12px; padding: 14px 24px; background: var(--surface); border-bottom: 1px solid var(--border); }
   .filter-label { color: var(--muted); font-size: 13px; }
-  .filter-btn {
-    padding: 6px 14px; border-radius: 8px;
-    border: 1px solid var(--border); background: transparent;
-    color: var(--muted); font-size: 13px; cursor: pointer;
-    font-family: 'DM Sans', sans-serif; transition: all 0.2s;
-  }
+  .filter-btn { padding: 6px 14px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
   .filter-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
   .filter-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
   .sync-time { margin-left: auto; color: var(--muted); font-size: 12px; font-family: 'DM Mono', monospace; }
@@ -145,22 +67,14 @@
 
   /* SECTION */
   .section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-  .section-header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 20px; border-bottom: 1px solid var(--border);
-    cursor: pointer; user-select: none;
-  }
+  .section-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; }
   .section-header:hover { background: var(--surface2); }
   .section-title { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; }
   .section-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
   .icon-aanvragen { background: rgba(79,127,255,0.15); }
   .icon-plaatsingen { background: rgba(34,197,94,0.15); }
   .icon-beschikbaarheid { background: rgba(245,158,11,0.15); }
-  .section-count {
-    background: var(--surface2); border: 1px solid var(--border);
-    border-radius: 20px; padding: 2px 10px;
-    font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace;
-  }
+  .section-count { background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; }
   .section-chevron { color: var(--muted); font-size: 12px; transition: transform 0.2s; }
   .section-chevron.open { transform: rotate(180deg); }
   .section-body { display: none; }
@@ -169,25 +83,14 @@
   /* TABLE */
   .table-wrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; }
-  th {
-    text-align: left; padding: 10px 16px;
-    font-size: 11px; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 0.05em; color: var(--muted);
-    background: var(--surface2); border-bottom: 1px solid var(--border);
-    white-space: nowrap;
-  }
+  th { text-align: left; padding: 10px 16px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); background: var(--surface2); border-bottom: 1px solid var(--border); white-space: nowrap; }
   td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: middle; }
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: rgba(255,255,255,0.02); }
 
   /* PIPELINE */
   .pipeline { display: flex; gap: 6px; flex-wrap: wrap; }
-  .pip {
-    display: flex; align-items: center; gap: 4px;
-    padding: 3px 8px; border-radius: 6px;
-    font-size: 12px; font-weight: 500; cursor: pointer;
-    transition: all 0.15s; white-space: nowrap;
-  }
+  .pip { display: flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 6px; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
   .pip:hover { opacity: 0.8; transform: scale(1.05); }
   .pip-voorstel { background: rgba(79,127,255,0.15); color: #7ba7ff; }
   .pip-gesprek { background: rgba(245,158,11,0.15); color: #fbbf24; }
@@ -200,15 +103,14 @@
   .status-niet { background: rgba(79,127,255,0.15); color: #7ba7ff; }
   .status-beschikbaar { background: rgba(34,197,94,0.15); color: #4ade80; }
   .status-binnenkort { background: rgba(245,158,11,0.15); color: #fbbf24; }
-  .status-geplaatst { background: rgba(34,197,94,0.15); color: #4ade80; }
+  .badge-deta { background: rgba(34,197,94,0.15); color: #4ade80; }
+  .badge-zzp { background: rgba(79,127,255,0.15); color: #7ba7ff; }
+  .badge-ws { background: rgba(245,158,11,0.15); color: #fbbf24; }
+  .badge-other { background: var(--surface2); color: var(--muted); }
 
   /* BESCHIKBAARHEID ALERT */
   .geen-voorstellen td:first-child { border-left: 3px solid var(--red); }
-  .alert-dot {
-    display: inline-block; width: 7px; height: 7px;
-    background: var(--red); border-radius: 50%; margin-right: 6px;
-    animation: pulse 2s infinite;
-  }
+  .alert-dot { display: inline-block; width: 7px; height: 7px; background: var(--red); border-radius: 50%; margin-right: 6px; animation: pulse 2s infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
   /* LOADING / EMPTY */
@@ -218,21 +120,12 @@
   .empty { padding: 40px; text-align: center; color: var(--muted); }
 
   /* MODAL */
-  .modal-overlay {
-    display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,0.7); z-index: 1000;
-    align-items: center; justify-content: center;
-  }
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center; }
   .modal-overlay.open { display: flex; }
-  .modal {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 24px;
-    max-width: 480px; width: 90%; max-height: 80vh; overflow-y: auto;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.6);
-  }
+  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; max-width: 480px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 24px 64px rgba(0,0,0,0.6); }
   .modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
   .modal-title { font-size: 16px; font-weight: 600; }
-  .modal-close { background: none; border: none; color: var(--muted); font-size: 20px; cursor: pointer; line-height: 1; }
+  .modal-close { background: none; border: none; color: var(--muted); font-size: 20px; cursor: pointer; }
   .modal-close:hover { color: var(--text); }
   .modal-item { display: flex; flex-direction: column; gap: 4px; padding: 12px; background: var(--surface2); border-radius: 8px; margin-bottom: 8px; }
   .modal-item-name { font-weight: 500; font-size: 14px; }
@@ -240,35 +133,24 @@
   .modal-item-date { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); }
 
   /* ERROR */
-  .error-banner {
-    display: none; background: rgba(239,68,68,0.1);
-    border: 1px solid rgba(239,68,68,0.3); border-radius: 8px;
-    padding: 12px 16px; color: #fca5a5; font-size: 13px; margin: 16px 24px 0;
-  }
+  .error-banner { display: none; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); border-radius: 8px; padding: 12px 16px; color: #fca5a5; font-size: 13px; margin: 16px 24px 0; }
 </style>
 </head>
 <body>
 
-<!-- LOGIN -->
 <div id="login-screen">
   <div class="login-card">
     <div class="login-logo">IF</div>
     <h1>IFG Sales Dashboard</h1>
     <p>Log in met je Interim Finance Group account om verder te gaan.</p>
     <button class="btn-login" onclick="login()">
-      <svg width="18" height="18" viewBox="0 0 21 21" fill="none">
-        <path d="M10 0H0v10h10V0z" fill="#f25022"/>
-        <path d="M21 0H11v10h10V0z" fill="#7fba00"/>
-        <path d="M10 11H0v10h10V11z" fill="#00a4ef"/>
-        <path d="M21 11H11v10h10V11z" fill="#ffb900"/>
-      </svg>
+      <svg width="18" height="18" viewBox="0 0 21 21" fill="none"><path d="M10 0H0v10h10V0z" fill="#f25022"/><path d="M21 0H11v10h10V0z" fill="#7fba00"/><path d="M10 11H0v10h10V11z" fill="#00a4ef"/><path d="M21 11H11v10h10V11z" fill="#ffb900"/></svg>
       Inloggen met Microsoft
     </button>
     <div class="login-error" id="login-error"></div>
   </div>
 </div>
 
-<!-- APP -->
 <div id="app">
   <div class="header">
     <div class="header-left">
@@ -282,10 +164,7 @@
         <span class="role-pill" id="user-role-badge"></span>
       </div>
       <button class="btn-refresh" onclick="loadAllData()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M23 4v6h-6"/><path d="M1 20v-6h6"/>
-          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-        </svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
         Vernieuwen
       </button>
       <button class="btn-logout" onclick="logout()">Uitloggen</button>
@@ -305,49 +184,28 @@
   <div class="content">
     <div class="section">
       <div class="section-header" onclick="toggleSection('aanvragen')">
-        <div class="section-title">
-          <div class="section-icon icon-aanvragen">📋</div>
-          Aanvragen
-          <span class="section-count" id="count-aanvragen">0</span>
-        </div>
+        <div class="section-title"><div class="section-icon icon-aanvragen">📋</div>Aanvragen<span class="section-count" id="count-aanvragen">0</span></div>
         <span class="section-chevron open" id="chevron-aanvragen">▼</span>
       </div>
-      <div class="section-body open" id="body-aanvragen">
-        <div class="loading"><div class="spinner"></div>Laden...</div>
-      </div>
+      <div class="section-body open" id="body-aanvragen"><div class="loading"><div class="spinner"></div>Laden...</div></div>
     </div>
-
     <div class="section">
       <div class="section-header" onclick="toggleSection('plaatsingen')">
-        <div class="section-title">
-          <div class="section-icon icon-plaatsingen">✅</div>
-          Plaatsingen
-          <span class="section-count" id="count-plaatsingen">0</span>
-        </div>
+        <div class="section-title"><div class="section-icon icon-plaatsingen">✅</div>Plaatsingen<span class="section-count" id="count-plaatsingen">0</span></div>
         <span class="section-chevron open" id="chevron-plaatsingen">▼</span>
       </div>
-      <div class="section-body open" id="body-plaatsingen">
-        <div class="loading"><div class="spinner"></div>Laden...</div>
-      </div>
+      <div class="section-body open" id="body-plaatsingen"><div class="loading"><div class="spinner"></div>Laden...</div></div>
     </div>
-
     <div class="section">
       <div class="section-header" onclick="toggleSection('beschikbaarheid')">
-        <div class="section-title">
-          <div class="section-icon icon-beschikbaarheid">👥</div>
-          Beschikbaarheid
-          <span class="section-count" id="count-beschikbaarheid">0</span>
-        </div>
+        <div class="section-title"><div class="section-icon icon-beschikbaarheid">👥</div>Beschikbaarheid<span class="section-count" id="count-beschikbaarheid">0</span></div>
         <span class="section-chevron open" id="chevron-beschikbaarheid">▼</span>
       </div>
-      <div class="section-body open" id="body-beschikbaarheid">
-        <div class="loading"><div class="spinner"></div>Laden...</div>
-      </div>
+      <div class="section-body open" id="body-beschikbaarheid"><div class="loading"><div class="spinner"></div>Laden...</div></div>
     </div>
   </div>
 </div>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modal" onclick="closeModal(event)">
   <div class="modal">
     <div class="modal-header">
@@ -366,17 +224,12 @@ const SP_API    = SP_SITE + '/_api/web/lists/getbytitle';
 const SCOPES    = ['https://interimfinancegroup.sharepoint.com/AllSites.Read'];
 
 const msalConfig = {
-  auth: {
-    clientId: CLIENT_ID,
-    authority: 'https://login.microsoftonline.com/' + TENANT_ID,
-    redirectUri: 'https://dashboard-ifg.github.io/ifg-dashboard/'
-  },
+  auth: { clientId: CLIENT_ID, authority: 'https://login.microsoftonline.com/' + TENANT_ID, redirectUri: 'https://dashboard-ifg.github.io/ifg-dashboard/' },
   cache: { cacheLocation: 'sessionStorage', storeAuthStateInCookie: true }
 };
-
 const msalInstance = new msal.PublicClientApplication(msalConfig);
 
-// GEBRUIKERS MAP (fallback als SP niet beschikbaar)
+// Statische gebruikersmap als fallback
 const GEBRUIKERS_MAP = {
   '1':     { naam: 'Jan Hessing',        rol: 'Beheerder',        vestiging: 'Interim Finance Group' },
   '10019': { naam: 'Akeo Kuipers',       rol: 'Beheerder',        vestiging: 'Interim Finance Group' },
@@ -390,12 +243,16 @@ const GEBRUIKERS_MAP = {
   '413':   { naam: 'Moos Azadmanesh',    rol: 'Recruiter',        vestiging: 'IFG Search' }
 };
 
+// Match status IDs uit Carerix
+const STATUS_VOORSTEL = ['1055'];
+const STATUS_GESPREK  = ['7', '8'];
+
 let currentUser = null;
 let currentRole = null;
 let currentFilter = 'all';
 let allData = { aanvragen: [], plaatsingen: [], beschikbaarheid: [] };
 
-// ─── AUTH ───────────────────────────────────────────────────────────────────
+// ─── AUTH ─────────────────────────────────────────────────────────────────────
 async function login() {
   try {
     const resp = await msalInstance.loginPopup({ scopes: SCOPES });
@@ -420,25 +277,18 @@ async function getToken() {
   return resp.accessToken;
 }
 
-// ─── INIT ───────────────────────────────────────────────────────────────────
+// ─── INIT ─────────────────────────────────────────────────────────────────────
 async function initApp(account) {
   currentUser = account;
   const email = (account.username || '').toLowerCase();
 
-  // Rol bepalen op basis van e-mail
-  if (email.includes('j.hessing') || email.includes('a.kuipers')) {
-    currentRole = 'Beheerder';
-  } else if (email.includes('t.heuvels') || email.includes('k.bosch') || email.includes('j.kool') || email.includes('m.doornbos')) {
-    currentRole = 'Business Manager';
-  } else if (email.includes('j.vlam') || email.includes('s.timmerman')) {
-    currentRole = 'Talent Manager';
-  } else if (email.includes('b.schip') || email.includes('m.azadmanesh')) {
-    currentRole = 'Recruiter';
-  } else {
-    currentRole = 'Business Manager';
-  }
+  // Rol bepalen op e-mail
+  if (email.includes('j.hessing') || email.includes('a.kuipers')) currentRole = 'Beheerder';
+  else if (email.includes('t.heuvels') || email.includes('k.bosch') || email.includes('j.kool') || email.includes('m.doornbos')) currentRole = 'Business Manager';
+  else if (email.includes('j.vlam') || email.includes('s.timmerman')) currentRole = 'Talent Manager';
+  else if (email.includes('b.schip') || email.includes('m.azadmanesh')) currentRole = 'Recruiter';
+  else currentRole = 'Business Manager';
 
-  // UI updaten
   const initials = (account.name || account.username).split(' ').map(n => n[0]).join('').substring(0,2).toUpperCase();
   document.getElementById('user-initials').textContent = initials;
   document.getElementById('user-name').textContent = account.name || account.username;
@@ -447,32 +297,22 @@ async function initApp(account) {
   const rc = currentRole === 'Beheerder' ? 'Beheerder' : currentRole === 'Business Manager' ? 'BM' : currentRole === 'Talent Manager' ? 'TM' : 'Recruiter';
   badge.className = 'role-pill role-' + rc;
 
-  // Filter bar verbergen voor niet-beheerders
   if (currentRole !== 'Beheerder') {
-    document.getElementById('filter-all').style.display = 'none';
-    document.getElementById('filter-ifg').style.display = 'none';
-    document.getElementById('filter-search').style.display = 'none';
+    ['filter-all','filter-ifg','filter-search'].forEach(id => document.getElementById(id).style.display = 'none');
   }
 
   document.getElementById('login-screen').style.display = 'none';
   document.getElementById('app').style.display = 'block';
-
   await loadAllData();
 }
 
-// ─── DATA ────────────────────────────────────────────────────────────────────
+// ─── DATA ─────────────────────────────────────────────────────────────────────
 async function spGet(list) {
   const token = await getToken();
-  const url = SP_API + "('" + list + "')/items?$top=500&$orderby=Id desc";
-  const resp = await fetch(url, {
-    headers: {
-      'Authorization': 'Bearer ' + token,
-      'Accept': 'application/json;odata=nometadata'
-    }
-  });
+  const url = SP_API + "('" + list + "')/items?$top=500";
+  const resp = await fetch(url, { headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/json;odata=nometadata' } });
   if (!resp.ok) throw new Error('SP fout ' + resp.status + ' voor ' + list);
-  const data = await resp.json();
-  return data.value || [];
+  return (await resp.json()).value || [];
 }
 
 async function loadAllData() {
@@ -482,38 +322,31 @@ async function loadAllData() {
   });
   try {
     const [aanvragen, plaatsingen, beschikbaarheid] = await Promise.all([
-      spGet('IFG_Aanvragen'),
-      spGet('IFG_Plaatsingen'),
-      spGet('IFG_Beschikbaarheid')
+      spGet('IFG_Aanvragen'), spGet('IFG_Plaatsingen'), spGet('IFG_Beschikbaarheid')
     ]);
     allData = { aanvragen, plaatsingen, beschikbaarheid };
     document.getElementById('sync-time').textContent = 'Bijgewerkt: ' + new Date().toLocaleTimeString('nl-NL');
     renderAll();
   } catch(e) {
-    showError('Fout bij laden van data: ' + e.message);
+    showError('Fout bij laden: ' + e.message);
   }
 }
 
-// ─── FILTER ──────────────────────────────────────────────────────────────────
+// ─── FILTER ───────────────────────────────────────────────────────────────────
 function setFilter(f) {
   currentFilter = f;
   ['all','ifg','search'].forEach(id => document.getElementById('filter-' + id).classList.remove('active'));
-  const btnId = f === 'all' ? 'filter-all' : f === 'Interim Finance Group' ? 'filter-ifg' : 'filter-search';
-  document.getElementById(btnId).classList.add('active');
+  document.getElementById(f === 'all' ? 'filter-all' : f === 'Interim Finance Group' ? 'filter-ifg' : 'filter-search').classList.add('active');
   renderAll();
 }
 
 function filterItems(items, ownerField) {
   if (currentRole === 'Beheerder') {
     if (currentFilter === 'all') return items;
-    return items.filter(i => {
-      const u = GEBRUIKERS_MAP[i[ownerField]];
-      return u && u.vestiging === currentFilter;
-    });
+    return items.filter(i => { const u = GEBRUIKERS_MAP[i[ownerField]]; return u && u.vestiging === currentFilter; });
   }
-  // BM en Recruiter: eigen items + vestiging
   const myId = getMyId();
-  return items.filter(i => i[ownerField] === myId);
+  return myId ? items.filter(i => String(i[ownerField]) === String(myId)) : items;
 }
 
 function getMyId() {
@@ -524,19 +357,82 @@ function getMyId() {
   return null;
 }
 
-// ─── RENDER ───────────────────────────────────────────────────────────────────
-function renderAll() {
-  renderAanvragen();
-  renderPlaatsingen();
-  renderBeschikbaarheid();
+// ─── HELPERS ──────────────────────────────────────────────────────────────────
+function parseJSON(str) { try { return JSON.parse(str || '[]'); } catch(e) { return []; } }
+
+function getVoorstellenGesprekken(kandidaten) {
+  const voorstellen = kandidaten.filter(k => k.statusInfo && STATUS_VOORSTEL.includes(String(k.statusInfo._id)));
+  const gesprekken  = kandidaten.filter(k => k.statusInfo && STATUS_GESPREK.includes(String(k.statusInfo._id)));
+  return { voorstellen, gesprekken };
 }
+
+function kandidaatNaam(k) {
+  if (k.toEmployee) return k.toEmployee.firstName + ' ' + k.toEmployee.lastName;
+  return k.naam || '-';
+}
+
+function kandidaatBM(k) {
+  if (k.owner) return k.owner.firstName + ' ' + k.owner.lastName;
+  return k.bm || '-';
+}
+
+function contractBadge(raw) {
+  const s = (raw || '').toLowerCase();
+  if (s.includes('deta')) return '<span class="status-badge badge-deta">DETA</span>';
+  if (s.includes('zzp'))  return '<span class="status-badge badge-zzp">ZZP</span>';
+  if (s.includes('w&s') || s.includes('ws') || s.includes('w&amp;s')) return '<span class="status-badge badge-ws">W&S</span>';
+  return '<span class="status-badge badge-other">' + esc(raw) + '</span>';
+}
+
+function pipBtn(type, count, title, items) {
+  if (!count) return '<span class="pip pip-zero">' + (type === 'v' ? '📄' : '🗓') + ' 0</span>';
+  const icon = type === 'v' ? '📄' : '🗓';
+  const cls  = type === 'v' ? 'pip-voorstel' : 'pip-gesprek';
+  return '<span class="pip ' + cls + '" onclick=\'showModal(' + JSON.stringify(title) + ',' + JSON.stringify(items) + ')\'>' + icon + ' ' + count + '</span>';
+}
+
+function toggleSection(name) {
+  document.getElementById('body-' + name).classList.toggle('open');
+  document.getElementById('chevron-' + name).classList.toggle('open');
+}
+
+function fmtDate(d) {
+  if (!d) return '';
+  try { return new Date(d).toLocaleDateString('nl-NL', {day:'2-digit',month:'2-digit',year:'numeric'}); } catch(e) { return d; }
+}
+
+function esc(s) {
+  return (s||'-').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function showError(msg) {
+  const el = document.getElementById('error-banner');
+  el.textContent = msg; el.style.display = msg ? 'block' : 'none';
+}
+
+function closeModal(e) { if (e.target.id === 'modal') document.getElementById('modal').classList.remove('open'); }
+
+// ─── MODAL ────────────────────────────────────────────────────────────────────
+function showModal(title, items) {
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-body').innerHTML = items.map(k =>
+    '<div class="modal-item">' +
+    '<div class="modal-item-name">' + esc(kandidaatNaam(k)) + '</div>' +
+    '<div class="modal-item-meta">BM: ' + esc(kandidaatBM(k)) + '</div>' +
+    '<div class="modal-item-date">' + fmtDate(k.statusInfoModificationDate || k.datum) + '</div>' +
+    '</div>'
+  ).join('') || '<div class="empty">Geen items</div>';
+  document.getElementById('modal').classList.add('open');
+}
+
+// ─── RENDER ───────────────────────────────────────────────────────────────────
+function renderAll() { renderAanvragen(); renderPlaatsingen(); renderBeschikbaarheid(); }
 
 function renderAanvragen() {
   const body = document.getElementById('body-aanvragen');
   if (currentRole === 'Talent Manager') {
     document.getElementById('count-aanvragen').textContent = '—';
-    body.innerHTML = '<div class="empty">Aanvragen zijn niet zichtbaar voor Talent Managers.</div>';
-    return;
+    body.innerHTML = '<div class="empty">Aanvragen zijn niet zichtbaar voor Talent Managers.</div>'; return;
   }
   const items = filterItems(allData.aanvragen, 'OwnerID');
   document.getElementById('count-aanvragen').textContent = items.length;
@@ -546,10 +442,8 @@ function renderAanvragen() {
     '<th>Vacature</th><th>Opdrachtgever</th><th>Type</th><th>Consultant</th><th>Pipeline</th>' +
     '</tr></thead><tbody>' +
     items.map(a => {
-      let kandidaten = [];
-      try { kandidaten = JSON.parse(a.KandidatenJSON || '[]'); } catch(e) {}
-      const voorstellen = kandidaten.filter(k => k.statusId === '1055');
-      const gesprekken  = kandidaten.filter(k => k.statusId === '7' || k.statusId === '8');
+      const kandidaten = parseJSON(a.KandidatenJSON);
+      const { voorstellen, gesprekken } = getVoorstellenGesprekken(kandidaten);
       const type = (a.AanvraagType || '').trim();
       const isEx = type.toLowerCase().includes('exclusief') && !type.toLowerCase().includes('niet');
       return '<tr>' +
@@ -558,24 +452,18 @@ function renderAanvragen() {
         '<td><span class="status-badge ' + (isEx ? 'status-exclusief' : 'status-niet') + '">' + esc(type) + '</span></td>' +
         '<td>' + esc(a.Owner) + '</td>' +
         '<td><div class="pipeline">' +
-          (voorstellen.length
-            ? '<span class="pip pip-voorstel" onclick=\'showModal("Voorstellen — ' + esc(a.Vacature) + '",' + JSON.stringify(voorstellen) + ')\'">📄 ' + voorstellen.length + '</span>'
-            : '<span class="pip pip-zero">📄 0</span>') +
-          (gesprekken.length
-            ? '<span class="pip pip-gesprek" onclick=\'showModal("Gesprekken — ' + esc(a.Vacature) + '",' + JSON.stringify(gesprekken) + ')\'">🗓 ' + gesprekken.length + '</span>'
-            : '<span class="pip pip-zero">🗓 0</span>') +
+          pipBtn('v', voorstellen.length, 'Voorstellen — ' + a.Vacature, voorstellen) +
+          pipBtn('g', gesprekken.length, 'Gesprekken — ' + a.Vacature, gesprekken) +
         '</div></td>' +
       '</tr>';
-    }).join('') +
-    '</tbody></table></div>';
+    }).join('') + '</tbody></table></div>';
 }
 
 function renderPlaatsingen() {
   const body = document.getElementById('body-plaatsingen');
   if (currentRole === 'Talent Manager') {
     document.getElementById('count-plaatsingen').textContent = '—';
-    body.innerHTML = '<div class="empty">Plaatsingen zijn niet zichtbaar voor Talent Managers.</div>';
-    return;
+    body.innerHTML = '<div class="empty">Plaatsingen zijn niet zichtbaar voor Talent Managers.</div>'; return;
   }
   const items = filterItems(allData.plaatsingen, 'OwnerID');
   document.getElementById('count-plaatsingen').textContent = items.length;
@@ -588,19 +476,16 @@ function renderPlaatsingen() {
       '<td><strong>' + esc(p.Kandidaat) + '</strong></td>' +
       '<td>' + esc(p.Vacature) + '</td>' +
       '<td>' + esc(p.Opdrachtgever) + '</td>' +
-      '<td><span class="status-badge status-geplaatst">' + esc(p.Contract) + '</span></td>' +
+      '<td>' + contractBadge(p.Contract) + '</td>' +
       '<td>' + esc(p.Owner) + '</td>' +
-      '<td style="font-family:\'DM Mono\',monospace;font-size:12px">' + fmtDate(p.Startdatum) + '</td>' +
+      '<td style="font-family:\'DM Mono\',monospace;font-size:12px">' + (fmtDate(p.Startdatum) || '<span style="color:var(--muted)">—</span>') + '</td>' +
       '<td style="font-family:\'DM Mono\',monospace;font-size:12px">' + (fmtDate(p.VerwachteEinddatum) || '<span style="color:var(--muted)">—</span>') + '</td>' +
-    '</tr>').join('') +
-    '</tbody></table></div>';
+    '</tr>').join('') + '</tbody></table></div>';
 }
 
 function renderBeschikbaarheid() {
   const body = document.getElementById('body-beschikbaarheid');
-  const items = currentRole === 'Talent Manager'
-    ? allData.beschikbaarheid
-    : filterItems(allData.beschikbaarheid, 'TalentManagerID');
+  const items = currentRole === 'Talent Manager' ? allData.beschikbaarheid : filterItems(allData.beschikbaarheid, 'TalentManagerID');
   document.getElementById('count-beschikbaarheid').textContent = items.length;
   if (!items.length) { body.innerHTML = '<div class="empty">Geen beschikbare medewerkers.</div>'; return; }
 
@@ -608,77 +493,29 @@ function renderBeschikbaarheid() {
     '<th>Medewerker</th><th>Status</th><th>Talent Manager</th><th>Voorstellen</th><th>Gesprekken</th>' +
     '</tr></thead><tbody>' +
     items.map(m => {
-      let matches = [];
-      try { matches = JSON.parse(m.MatchesJSON || '[]'); } catch(e) {}
-      const voorstellen = matches.filter(k => k.statusId === '1055');
-      const gesprekken  = matches.filter(k => k.statusId === '7' || k.statusId === '8');
-      const geenActief  = voorstellen.length === 0 && gesprekken.length === 0;
-      const isBeschikbaar = (m.Status || '').includes('beschikbaar') && !(m.Status || '').includes('binnenkort');
+      const matches = parseJSON(m.MatchesJSON);
+      const { voorstellen, gesprekken } = getVoorstellenGesprekken(matches);
+      const geenActief = voorstellen.length === 0 && gesprekken.length === 0;
+      const isBeschikbaar = (m.Status||'').includes('beschikbaar') && !(m.Status||'').includes('binnenkort');
       return '<tr class="' + (geenActief ? 'geen-voorstellen' : '') + '">' +
         '<td><strong>' + (geenActief ? '<span class="alert-dot"></span>' : '') + esc(m.Medewerker) + '</strong></td>' +
         '<td><span class="status-badge ' + (isBeschikbaar ? 'status-beschikbaar' : 'status-binnenkort') + '">' + esc(m.Status) + '</span></td>' +
         '<td>' + esc(m.TalentManager) + '</td>' +
-        '<td>' + (voorstellen.length
-          ? '<span class="pip pip-voorstel" onclick=\'showModal("Voorstellen — ' + esc(m.Medewerker) + '",' + JSON.stringify(voorstellen) + ')\'">📄 ' + voorstellen.length + '</span>'
-          : '<span style="color:var(--muted);font-size:12px">—</span>') + '</td>' +
-        '<td>' + (gesprekken.length
-          ? '<span class="pip pip-gesprek" onclick=\'showModal("Gesprekken — ' + esc(m.Medewerker) + '",' + JSON.stringify(gesprekken) + ')\'">🗓 ' + gesprekken.length + '</span>'
-          : '<span style="color:var(--muted);font-size:12px">—</span>') + '</td>' +
+        '<td>' + pipBtn('v', voorstellen.length, 'Voorstellen — ' + m.Medewerker, voorstellen) + '</td>' +
+        '<td>' + pipBtn('g', gesprekken.length, 'Gesprekken — ' + m.Medewerker, gesprekken) + '</td>' +
       '</tr>';
-    }).join('') +
-    '</tbody></table></div>';
-}
-
-// ─── MODAL ────────────────────────────────────────────────────────────────────
-function showModal(title, items) {
-  document.getElementById('modal-title').textContent = title;
-  document.getElementById('modal-body').innerHTML = items.map(k => '<div class="modal-item">' +
-    '<div class="modal-item-name">' + esc(k.naam || k.vacature || '-') + '</div>' +
-    '<div class="modal-item-meta">' + (k.opdrachtgever ? esc(k.opdrachtgever) + ' · ' : '') + 'BM: ' + esc(k.bm || '-') + '</div>' +
-    '<div class="modal-item-date">' + fmtDate(k.datum) + '</div>' +
-  '</div>').join('') || '<div class="empty">Geen items</div>';
-  document.getElementById('modal').classList.add('open');
-}
-
-function closeModal(e) {
-  if (e.target.id === 'modal') document.getElementById('modal').classList.remove('open');
-}
-
-// ─── HELPERS ──────────────────────────────────────────────────────────────────
-function toggleSection(name) {
-  document.getElementById('body-' + name).classList.toggle('open');
-  document.getElementById('chevron-' + name).classList.toggle('open');
-}
-
-function fmtDate(d) {
-  if (!d) return '';
-  try { return new Date(d).toLocaleDateString('nl-NL', {day:'2-digit',month:'2-digit',year:'numeric'}); } catch(e) { return d; }
-}
-
-function esc(s) {
-  return (s || '-').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-function showError(msg) {
-  const el = document.getElementById('error-banner');
-  el.textContent = msg;
-  el.style.display = msg ? 'block' : 'none';
+    }).join('') + '</tbody></table></div>';
 }
 
 // ─── AUTO LOGIN ───────────────────────────────────────────────────────────────
 (async () => {
   await msalInstance.initialize();
-  // Redirect response afhandelen
   try {
     const resp = await msalInstance.handleRedirectPromise();
     if (resp) { msalInstance.setActiveAccount(resp.account); await initApp(resp.account); return; }
   } catch(e) {}
-  // Bestaande sessie
   const accounts = msalInstance.getAllAccounts();
-  if (accounts.length > 0) {
-    msalInstance.setActiveAccount(accounts[0]);
-    await initApp(accounts[0]);
-  }
+  if (accounts.length > 0) { msalInstance.setActiveAccount(accounts[0]); await initApp(accounts[0]); }
 })();
 </script>
 </body>
